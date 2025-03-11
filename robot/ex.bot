@@ -1,17 +1,16 @@
 *** Settings ***
 Library  SeleniumLibrary
 
-
 *** Variables ***
 ${URL}   https://www.kbtg.tech/
-${BROSER}  Chrome
+${BROWSERS}  Chrome
 
 *** Keywords ***
 Open The Best Website
-    [Arguments]  ${url}  ${broser}
-    Open Browser  ${url}  ${broser}
+    [Arguments]  ${url}  ${browsers}
+    Open Browser  ${url}  ${browsers}
 
 *** Test Cases ***
 TS_: เปิดหน้าเว็บ
-    Open The Best Website   ${URL}   ${BROSER} 
-    Maximize Browser Window
+        Open The Best Website   ${URL}   ${BROWSERS}
+        Maximize Browser Window
