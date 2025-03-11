@@ -2,7 +2,7 @@
 Library  SeleniumLibrary
 
 *** Variables ***
-${URL}   http://172.16.19.59:9080/wcf
+${URL}   https://google.com
 ${BROWSERS}  Chrome
 ${USERNAME}    bo.suttawat
 ${PASSWORD}    xxxxx    
@@ -11,12 +11,14 @@ ${PASSWORD}    xxxxx
 Open The Best Website
     [Arguments]  ${url}  ${browsers}
     Open Browser  ${url}  ${browsers}
+Add User Pass
+    Input Text    id=username    ${username}
+    Input Text    id=password    ${password}
 
 *** Test Cases ***
 TS_: เปิดหน้าเว็บ
         Open The Best Website    ${URL}    ${BROWSERS}
-TS_: กรอกข้อมูล
-        Add User Pass
-            Input Text    id=username    ${USERNAME}
-            Input Text    id=password    ${PASSWORD}
+TS_: กรอกข้อมูล u/p
+        Add User Pass    
+          
         ##Maximize Browser Window
