@@ -2,8 +2,10 @@
 Library  SeleniumLibrary
 
 *** Variables ***
-${URL}   https://www.kbtg.tech/
+${URL}   http://172.16.19.59:9080/wcf
 ${BROWSERS}  Chrome
+${USERNAME}    bo.suttawat
+${PASSWORD}    xxxxx    
 
 *** Keywords ***
 Open The Best Website
@@ -13,4 +15,8 @@ Open The Best Website
 *** Test Cases ***
 TS_: เปิดหน้าเว็บ
         Open The Best Website    ${URL}    ${BROWSERS}
-        Maximize Browser Window
+TS_: กรอกข้อมูล
+        Add User Pass
+            Input Text    id=username    ${USERNAME}
+            Input Text    id=password    ${PASSWORD}
+        ##Maximize Browser Window
