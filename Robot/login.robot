@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${URL}          
+${URL}          www.google.co.th
 ${BROWSER}     Chrome
 ${Email}    test@gmail.com
 ${PASSWORD}    123@Provexitdyo
