@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-18T15:24:41.132437" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="c:\xampp\htdocs\testgit\testgit\Robot\login.robot">
+<test id="s1-t1" name="User Can Login Successfully เข้าสู่ระบบ" line="26">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-03-18T15:24:41.621232" level="INFO">Opening browser 'Chrome' to base url 'https://thaideep.gdldevserv.com/auth/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_experimental_option("detach",True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-18T15:24:41.620554" elapsed="3.281269"/>
+</kw>
+<kw name="Login To The System">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-03-18T15:24:44.905424" level="INFO">Opening url 'https://thaideep.gdldevserv.com/auth/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-03-18T15:24:44.904672" elapsed="0.146263"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-18T15:24:45.051684" elapsed="0.036741"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-18T15:24:45.091316" level="INFO">Typing text 'test@gmail.com' into text field 'xpath=//input[@placeholder='Email']'.</msg>
+<arg>xpath=//input[@placeholder='Email']</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T15:24:45.089310" elapsed="0.262123"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-18T15:24:45.352627" level="INFO">Typing text '123@Provexitdyo' into text field 'xpath=//input[@placeholder='Password']'.</msg>
+<arg>xpath=//input[@placeholder='Password']</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T15:24:45.352007" elapsed="0.146962"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-18T15:24:47.500334" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-18T15:24:45.499445" elapsed="2.001226"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-18T15:24:47.501323" level="INFO">Clicking element 'xpath=//label[@for='customCheckLogin']'.</msg>
+<arg>xpath=//label[@for='customCheckLogin']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T15:24:47.500959" elapsed="0.125526"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-18T15:24:47.627606" level="INFO">Clicking element 'xpath=//button[@class='my-4 btn btn-primary']'.</msg>
+<arg>xpath=//button[@class='my-4 btn btn-primary']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T15:24:47.627041" elapsed="0.197830"/>
+</kw>
+<status status="PASS" start="2025-03-18T15:24:44.903469" elapsed="2.921822"/>
+</kw>
+<status status="PASS" start="2025-03-18T15:24:41.617973" elapsed="6.208307"/>
+</test>
+<status status="PASS" start="2025-03-18T15:24:41.139789" elapsed="6.689563"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login" id="s1" pass="1" fail="0" skip="0">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
