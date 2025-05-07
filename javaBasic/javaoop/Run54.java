@@ -10,9 +10,7 @@ class  Student {
     public void setScore(int[] score) {
         this.score = score;
     }
-  
     public void inputScore() {
-
         Scanner scan = new Scanner(System.in);
         for(int i = 0 ; i < score.length; i++) {
             System.out.print("จำนวนคะแนนคนที่:" + (i + 1) + " >> ");
@@ -36,10 +34,8 @@ public class Run54 {
 
         System.out.print("จำนวนนักเรียน(คน): ");
         int result = sc.nextInt();
-
         it.setScore(new int[result]);
         it.inputScore();
-
         System.out.println("สรุปค่าเฉลี่ยของนักเรียนจำนวน: " + result + " คน ได้ค่าเฉลี่ย: " + it.calculateAvg() + " %");
     }
 }
