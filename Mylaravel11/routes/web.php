@@ -2,6 +2,18 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+// import Controller Home
+use App\Http\Controllers\HomeController;
+
+//Auth::routes();
+
+//Home Controller
+Route::get('/home',[HomeController::class,'index'])->name('index');
+Route::get('/create',[HomeController::class,'create'])->name('create');
+Route::get('/update/{id?}',[HomeController::class,'update'])->name('update');
+Route::get('/store',[HomeController::class,'store'])->name('store');
 
 Route::get('/', function () {
     return view('welcome');
@@ -80,3 +92,12 @@ Route::prefix('admin')->group(function () {
 Route::post('/store', function(Request $request) {
     dd($request->all());
 });
+
+Route::get('/admin',function(){
+    return "Admin";
+})->middleware('admin')->name('admin');
+
+Route::get('/admin_login', function(){
+    return "Admin Login";
+})->name('admin_login');
+
