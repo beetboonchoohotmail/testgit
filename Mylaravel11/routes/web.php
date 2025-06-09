@@ -2,10 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 // import Controller Home
 use App\Http\Controllers\HomeController;
+//import PostController
+use App\Http\Controllers\PostsController;
 
 //Auth::routes();
 
@@ -15,8 +16,11 @@ Route::get('/create',[HomeController::class,'create'])->name('create');
 Route::get('/update/{id?}',[HomeController::class,'update'])->name('update');
 Route::get('/store',[HomeController::class,'store'])->name('store');
 
+//Posts
+Route::resource('posts', PostsController::class);
+
 Route::get('/', function () {
-    return view('welcome');
+    return view();
 });
 
 Route::get('/category',function(){
