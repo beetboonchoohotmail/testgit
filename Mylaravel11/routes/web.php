@@ -19,6 +19,13 @@ Route::get('/store',[HomeController::class,'store'])->name('store');
 //Posts
 Route::resource('posts', PostsController::class);
 
+//Connect to View
+Route::get('/aboute',function(){
+    return view('aboute');
+});
+
+Route::get('/postss',[PostsController::class,'index']);
+
 Route::get('/', function () {
     return view();
 });

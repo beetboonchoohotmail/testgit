@@ -10,8 +10,11 @@ class PostsController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        //
+    { 
+        //การส่งค่าจาก Con ไป View
+        $PostName = "หน้าแรกบทความ";
+        $CountPost = "จำนวนบทความ 100 หน้า";
+        return view('post.index',compact('PostName','CountPost'));
     }
 
     /**
