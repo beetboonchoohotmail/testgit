@@ -1,12 +1,17 @@
-@extends('layouts.frontend')
-    @section('title', 'ยินดีตอนรับ')
-        @section('css_before')
-
-        @endsection
-        @section('content')
-
-        @endsection
-        @section('js_before')
-        
-        @endsection
-    @endsection
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Controller</title>
+</head>
+<body>
+     <dir>
+        @for($i = 1; $i < 10; $i++)
+            <br />
+            2 คูณ {{ $i }} เท่ากับ {{ $i * 2}}
+        @endfor
+     </dir>
+</body>
+</html>
