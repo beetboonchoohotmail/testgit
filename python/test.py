@@ -1,7 +1,9 @@
-x = str(3)
-y = int(3)
-z = float(3)
+x = "awesome"
 
-print(x)
-print(y)
-print(z)
+def myfunc():
+  x = "fantastic"
+  print("Python is " + x)
+
+myfunc()
+
+print("Python is " + x)
